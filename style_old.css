@@ -1,0 +1,33 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.page {
+  /*This pads l and r with 1 rem*/
+  padding: 0 1rem;
+}
+
+.navbar {
+  display: inline-flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+h1 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+button {
+  font-size: 1.5rem;
+  color: white;
+  background-color: indianred;
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+}
