@@ -1,36 +1,169 @@
-.container {
-  display: flex;
-  flex-direction: row;
+body {
+  margin: 0;
   height: 100vh;
 }
 
-#profile {
-  background-color: indianred;
-  width: 25%;
+.container {
+  display: grid;
+  grid-template-rows: 40% 30% 30%;
+  grid-template-columns: 20% 40% 40%;
+  height: 100vh;
 }
 
-.content {
-  background-color: brown;
-  width: 75%;
+section {
+  padding: 0.75rem;
+}
+
+/*Here are some of the page-wide stylings, that occur repeatedly throughout the page*/
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.blurb {
+  width: 40ch;
+}
+
+.intro {
+  padding: 0.5rem;
+}
+
+button {
+  font-size: 1.5rem;
+  color: white;
+  background-color: #176b87;
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+}
+
+/*I need to figure out how to make this card class completely size-static. It should never change size in any way*/
+
+.item {
+  border: 1px solid black;
+  background-color: #ca5f07;
+  border-radius: 0.375rem;
+  margin: 0.5rem;
+  flex: 0 0;
+}
+
+.item-photo {
+  width: 100%;
+  height: 40%;
+  object-fit: cover;
+  border-radius: 0.375rem;
+}
+
+.item-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0.5rem;
+  /*This makes the item body take up 60% of the card, with photo being 40% above*/
+  height: 60%;
+}
+
+.item-body > * {
+  margin: 0.5rem;
+}
+.item-headline {
+  margin-top: 0;
+}
+
+/*Styling the left profile section*/
+
+#profile {
+  /*The linear gradient gives it that darker-toward the bottom look*/
+  background-image: linear-gradient(rgb(255 255 255 / 0%), rgb(0 0 0 / 87.5%)),
+    url(./assets/images/me2.jpeg);
+  background-size: cover;
+  background-position: 28%;
+  /*We'll want to just fix this width to the width of the photo I select. Don't want this to grow, just the content div*/
+  grid-row-start: 1;
+  grid-row-end: -1;
+  /*Making this a nested grid for positioning of the profile content*/
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
+}
+#profile-content {
+  grid-row: 5 / 6;
+  /*I am grossed out by all this nested flex and grid stuff. But idk how else to get my desired positioning.*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 0px 25px;
+}
+#profile-content > * {
+  margin: 10px 0px;
+  color: white;
+  font-family: Work Sans, sans-serif;
+}
+#socials img {
+  height: 25px;
+  margin-right: 10px;
 }
 
 #professional {
-  background-color: white;
-  grid-column: 1 / 3;
+  background-color: #d3e6ff;
+  /*These below just combine grs and gre and gcs and gce*/
+  grid-row: 1/2;
+  grid-column: 2/-1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-#adventure {
-  background-color: blue;
-  grid-column: 1 / 3;
+/*This extra code for the item cards in the pro section helps them to be vertical*/
+.pro.item {
+  height: 100%;
+  flex-basis: 25%;
 }
+
+/*-----------------------------------------------*/
+#adventure {
+  background-color: #b4d4ff;
+  grid-row: 2/-1;
+  grid-column: 2/3;
+  display: grid;
+  grid-template: 38% 62% / 50% 50%;
+}
+.adv.intro {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+.adv.item.one {
+  grid-row: 1/-1;
+  grid-column: 2/3;
+}
+
+/*I need these two rules below to override the height for the PCT section*/
+.adv.item.one > .item-body {
+  height: 40%;
+}
+.adv.item.one > .item-photo {
+  height: 60%;
+}
+/*-----------------------------------------------*/
 
 #writing {
-  background-color: green;
+  background-color: #86b6f6;
+  grid-row: 2/3;
+  grid-column: 3/-1;
 }
 
 #handiwork {
-  background-color: orange;
+  background-color: #176b87;
+  grid-row: 3/4;
+  grid-column: 3/-1;
+}
+
+footer {
+  background-color: darkslategrey;
+  color: white;
+  padding-left: 5px;
 }

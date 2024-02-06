@@ -10,7 +10,7 @@
   <!--Getting open sans font-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,13 +18,108 @@
   <header></header>
 
   <main class="container">
-    <div id="profile"></div>
-    <div class="content">
-      <section id="professional"></section>
-      <section id="adventure"></section>
-      <section id="writing"></section>
-      <section id="handiwork"></section>
+    <div id="profile">
+      <div id="profile-content">
+        <h1>Andrew Noble</h1>
+        <p>Hi, I'm Andrew. I am currently learning about web development, so I am building this website as practice. My
+          favorite color is orange.
+        </p>
+        <a href="./public/about.html">More About Me</a>
+        <a href="./public/contact.html">Contact</a>
+        <div id="socials">
+          <a href="https://substack.com/@andrewrnoble"><img src="./assets/images/substack.svg"
+              alt="substack logo" /></a>
+          <a href="https://linkedin.com/andrewrnoble"><img src="./assets/images/linkedin.svg" alt="linkedin logo" /></a>
+          <a href="https://github.com/andrewrn0"><img src="./assets/images/github.svg" alt="github logo" /></a>
+        </div>
+
+      </div>
     </div>
+    <section id="professional">
+      <div class="pro intro">
+        <h2 class="pro title">Professional Endeavors</h2>
+        <p class="pro blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum.</p>
+      </div>
+      <div class="pro item one">
+        <img class="item-photo" src="./assets/images/movies.png" />
+        <div class="item-body">
+          <h3 class="item-headline">Movie Ranking Project</h3>
+          <p class="item-blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt
+            ut labore et dolore mExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.</p>
+          <a class="item-link" href="./public/movie-ranking.html"><button>Check it out</button></a>
+        </div>
+      </div>
+
+      <div class="pro item two">
+        <img class="item-photo" src="./assets/images/birthday.png" />
+        <div class="item-body">
+          <h3 class="item-headline">Birthday Invite Project</h3>
+          <p class="item-blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt
+            ut labore et dolore r sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.</p>
+          <a class="item-link" href="./public/movie-ranking.html"><button>Check it out</button></a>
+        </div>
+      </div>
+
+      <div class="pro item three">
+        <img class="item-photo" src="./assets/images/cone-striped.svg" />
+        <div class="item-body">
+          <h3 class="item-headline">Coming Soon</h3>
+          <p class="item-blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt
+            ut labore et dolore magna alr sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.</p>
+          <a class="item-link" href="./public/movie-ranking.html"><button>Check it out</button></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="adventure">
+      <div class="adv intro">
+        <h2 class="adv title">Adventure</h2>
+        <p class="adv blurb">I love adventure in
+          endless forms. I love adventure that's not the norm, I love adventure in a storm. I love it here
+          and I love it there, I love adventures everywhere. For as long as I
+          can remember I've loved to see whats around the trail's bend and its lead me to the most joyful and memorable
+          experiences in my limited time here on Earth. My dad also read green eggs and ham to me as a kid. </p>
+      </div>
+      <div class="adv item one">
+        <img class="item-photo" src="./assets/images/pct_prof.JPG" />
+        <div class="item-body">
+          <h3 class="item-headline">Pacific Crest Trail 2021</h3>
+          <p class="item-blurb">My formative adventure. The best summer of my life as I spent 4 months walking a dusty
+            path through Calfornia, Oregon and Washington. Through smoke and heat, frost and pain, I realized that not
+            only can you be
+            supremely happy in spite of being dirty, tired, and hungry, you might find yourself happy because of those
+            things.
+          </p>
+          <a class="item-link" href="./public/movie-ranking.html"><button>Check it out</button></a>
+        </div>
+      </div>
+      <div class="adv item two">
+        <img class="item-photo" src="./assets/images/pfiffner.jpeg" />
+        <div class="item-body">
+          <h3 class="item-headline">Pfiffner Traverse July 2023</h3>
+          <p class="item-blurb">My long-planned, very first high route from Rocky Mountain National Park to I-70. An
+            amazing
+            5-day solo adventure full of
+            wildflowers, navigation skill building and thunder- and hail-based humblings. Probably the greatest
+            bang-for-my-buck
+            adventure I have ever done.
+          </p>
+          <a class="item-link" href="./public/movie-ranking.html"><button>Check it out</button></a>
+        </div>
+      </div>
+    </section>
+    <section id="writing"></section>
+    <section id="handiwork"></section>
   </main>
 
 
@@ -61,10 +156,8 @@
         mostly has stuff from when I was working as a robotics engineer
       </li>
     </ul>
-  </div>-->
-
-  <hr />
-  <footer><small>Andrew Noble 2024 © All Rights Reserved</small></footer>
+  </div>
+  <footer>2024 © Andrew Noble. All Rights Reserved.</footer>--->
 </body>
 
 </html>
