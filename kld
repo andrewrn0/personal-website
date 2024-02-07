@@ -1,0 +1,29 @@
+[33mcommit b16855471148d415eeba07df0d94d67f5d39a543[m[33m ([m[1;36mHEAD -> [m[1;32mredesign_2[m[33m, [m[1;31morigin/full-redesign[m[33m, [m[1;32mfull-redesign[m[33m)[m
+Author: Andrew Noble <aknoble.andrew@gmail.com>
+Date:   Mon Feb 5 23:53:10 2024 -0900
+
+    much progress on the new personal website!
+
+[33mcommit ff539a6249be87ad22cf8453021ef1f4695dc0fb[m
+Author: Andrew Noble <aknoble.andrew@gmail.com>
+Date:   Mon Jan 29 23:53:49 2024 -0900
+
+    preliminary flex and grid layout
+
+[33mcommit 7521e140513bd008af8b58a422d21dfd65b12d06[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: Andrew Noble <aknoble.andrew@gmail.com>
+Date:   Mon Jan 22 00:10:16 2024 -0900
+
+    playing with flexbox on the homepage
+
+[33mcommit cfadfde7c447aca41a1bea3617dfc93cfa95fb7b[m
+Author: Andrew Noble <aknoble.andrew@gmail.com>
+Date:   Sat Jan 20 22:34:09 2024 -0900
+
+    playing with positioning and stuff in the resume
+
+[33mcommit b631db04b28a243253bc2694bb930bf390dbbd01[m
+Author: Andrew Noble <aknoble.andrew@gmail.com>
+Date:   Thu Jan 18 23:02:11 2024 -0900
+
+    faffing about with colors, divs on the resume

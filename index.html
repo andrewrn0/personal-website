@@ -14,35 +14,35 @@
 </head>
 
 <body>
-  <!--I want to try and remove the header from desktop site, use it only on the mobile site. It will be a challenge-->
-  <header></header>
-
-  <main class="container">
-    <div id="profile">
-      <div id="profile-content">
-        <h1>Andrew Noble</h1>
-        <p>Hi, I'm Andrew. I am currently learning about web development, so I am building this website as practice. My
-          favorite color is orange.
-        </p>
-        <a href="./public/about.html">More About Me</a>
-        <a href="./public/contact.html">Contact</a>
-        <div id="socials">
-          <a href="https://substack.com/@andrewrnoble"><img src="./assets/images/substack.svg"
-              alt="substack logo" /></a>
-          <a href="https://linkedin.com/andrewrnoble"><img src="./assets/images/linkedin.svg" alt="linkedin logo" /></a>
-          <a href="https://github.com/andrewrn0"><img src="./assets/images/github.svg" alt="github logo" /></a>
-        </div>
-
+  <header id="profile">
+    <div id="profile-content">
+      <h1>Andrew Noble</h1>
+      <p>Hi, I'm Andrew. I am currently learning about web development, so I am building this website as practice. My
+        favorite color is orange.
+      </p>
+      <a href="./public/about.html">More About Me</a>
+      <a href="./public/contact.html">Contact</a>
+      <div id="socials">
+        <a href="https://substack.com/@andrewrnoble"><img src="./assets/images/substack.svg" alt="substack logo" /></a>
+        <a href="https://linkedin.com/andrewrnoble"><img src="./assets/images/linkedin.svg" alt="linkedin logo" /></a>
+        <a href="https://github.com/andrewrn0"><img src="./assets/images/github.svg" alt="github logo" /></a>
       </div>
     </div>
+  </header>
+
+  <main class="container">
     <section id="professional">
       <div class="pro intro">
         <h2 class="pro title">Professional Endeavors</h2>
-        <p class="pro blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.</p>
+        <p class="pro blurb">I studied mechanical engineering in college and really liked it. Afterward, I worked at a
+          robotics startup for a couple of years. Now I am branching out and trying a couple other things, including web
+          design of this page! I hope for this section to become a portfolio of programming projects. For now, it has
+          mostly trivial early tasks I am performing as part of the online class I am taking. Stary tuned for more as I
+          get better. </p>
+        <p class="pro blurb"> Here is my <a href="./public/resume.html">resume</a>, mostly including things from when I
+          worked as a
+          robotics engineer.
+        </p>
       </div>
       <div class="pro item one">
         <img class="item-photo" src="./assets/images/movies.png" />
@@ -87,7 +87,8 @@
         <p class="adv blurb">I love adventure in
           endless forms. I love adventure that's not the norm, I love adventure in a storm. I love it here
           and I love it there, I love adventures everywhere. For as long as I
-          can remember I've loved to see whats around the trail's bend and its lead me to the most joyful and memorable
+          can remember I've loved to see whats around the trail's bend and it has lead me to the most joyful and
+          memorable
           experiences in my limited time here on Earth. My dad also read green eggs and ham to me as a kid. </p>
       </div>
       <div class="adv item one">
@@ -100,7 +101,7 @@
             supremely happy in spite of being dirty, tired, and hungry, you might find yourself happy because of those
             things.
           </p>
-          <a class="item-link" href="./public/movie-ranking.html"><button>Check it out</button></a>
+          <a class="item-link" href=""><button>Check it out</button></a>
         </div>
       </div>
       <div class="adv item two">
@@ -114,50 +115,34 @@
             bang-for-my-buck
             adventure I have ever done.
           </p>
-          <a class="item-link" href="./public/movie-ranking.html"><button>Check it out</button></a>
+          <p><a class="item-link" href=""><button>Check it out</button></a>
         </div>
       </div>
     </section>
-    <section id="writing"></section>
-    <section id="handiwork"></section>
+    <section id="writing">
+      <div class="writ intro">
+        <h2 class="writ title">Writing</h2>
+        <p class="writ blurb">I've always enjoyed thinking about ideas, and for the last couple of years I have also
+          liked wriitng them down. Even more recently I have been fleshing out some of my thoughts and stories and
+          sharing them. This is a new endeavor for me, but its been a lot of fun so far and I hope to make it a
+          consistent practice.</p>
+        <p class="writ blurb">You can check out some of what I have written <a
+            href="https://substack.com/@andrewrnoble">here on
+            Substack</a></p>
+        <!--In the future it would be cool to add in a "most recent article" dynamic visual link here. For when I learn JS or whatever.-->
+      </div>
+    </section>
+    <section id="handiwork">
+      <div class="hand intro">
+        <h2 class="hand title">Handiwork</h2>
+        <p class="hand blurb">I like to make stuff with my hands from time to time. I always wish I had more time to
+          spend on this stuff, but the few projects I have managed to complete have been great joys to me. So far I
+          have mostly done woodworking and textiles, but I really want to get into welding fabrication,
+          mechanical and electronics tinkering, too. Basically I want to try it all.</p>
+        <p class="hand blurb">You can check out some of my projects <a href="">here</a></p>
+      </div>
+    </section>
   </main>
-
-
-
-
-
-
-
-
-
-
-  <!-- OLD CONTENT:
-
-  <div id="header">
-    <h1>Andrew Noble</h1>
-    <div class="navbar">
-      <a class="navbar-link" href="./public/contact.html"> <button>Contact</button></a>
-      <a class="navbar-link" href="./public/about.html"><button>More About Me</button></a>
-
-    </div>
-  </div>
-  <div class="page">
-    <p>
-      Hi there, I am new web developer, throwing stuff on the internet for
-      practice. Below are some links to stuff I've made
-    </p>
-    <ul>
-      <li>
-        <a href="./public/first-webpage.html">My very first webpage</a>, to
-        remember when I get employed as a freelancer and become a digital nomad
-      </li>
-      <li>
-        An HTML version of my <a href="./public/resume.html">resume</a>, which
-        mostly has stuff from when I was working as a robotics engineer
-      </li>
-    </ul>
-  </div>
-  <footer>2024 © Andrew Noble. All Rights Reserved.</footer>--->
 </body>
 
 </html>
