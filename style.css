@@ -1,97 +1,48 @@
-body {
-  margin: 0;
-  height: 100vh;
-}
-
-.container {
-  display: grid;
-  grid-template-rows: 40% 30% 30%;
-  grid-template-columns: 20% 40% 40%;
-  height: 100vh;
-}
+/*Stuff I don't need to be responsive goes up here at the top*/
 
 section {
-  padding: 0.75rem;
+  padding: 1rem;
 }
 
-/*Here are some of the page-wide stylings, that occur repeatedly throughout the page*/
-
-h1 {
-  font-size: 30px;
+main {
+  overflow-y: auto;
 }
 
-h2 {
-  margin-top: 0;
+@media (max-width: 992px) {
+  .item {
+    flex-direction: column-reverse;
+  }
 }
 
-.blurb {
-  width: 40ch;
+@media (min-width: 992px) {
+  /*At laptop and desktop sizes, this gives me that nice reversing of each item, looks pleasing aesthetically*/
+  .two,
+  .four {
+    flex-direction: row-reverse;
+  }
 }
 
-.intro {
-  padding: 0.5rem;
+body {
+  margin: 0;
+  display: grid;
+  /*OMG big learning: 1fr refers to the fraction of available space, not of total space, so below gives me fixed 300px sidebar and halves the remaining space */
+  grid-template-columns: 300px 1fr;
+  height: 100vh;
 }
 
-button {
-  font-size: 1.5rem;
-  color: white;
-  background-color: #176b87;
-  border-radius: 0.4rem;
-  border: none;
-  cursor: pointer;
-}
-
-/*I need to figure out how to make this card class completely size-static. It should never change size in any way*/
-
-.item {
-  border: 1px solid black;
-  background-color: #ca5f07;
-  border-radius: 0.375rem;
-  margin: 0.5rem;
-  flex: 0 0;
-}
-
-.item-photo {
-  width: 100%;
-  height: 40%;
-  object-fit: cover;
-  border-radius: 0.375rem;
-}
-
-.item-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 0.5rem;
-  /*This makes the item body take up 60% of the card, with photo being 40% above*/
-  height: 60%;
-}
-
-.item-body > * {
-  margin: 0.5rem;
-}
-.item-headline {
-  margin-top: 0;
-}
-
-/*Styling the left profile section*/
-
-#profile {
+header {
   /*The linear gradient gives it that darker-toward the bottom look*/
   background-image: linear-gradient(rgb(255 255 255 / 0%), rgb(0 0 0 / 87.5%)),
     url(./assets/images/me2.jpeg);
   background-size: cover;
   background-position: 28%;
-  /*We'll want to just fix this width to the width of the photo I select. Don't want this to grow, just the content div*/
   grid-row-start: 1;
   grid-row-end: -1;
-  /*Making this a nested grid for positioning of the profile content*/
-  display: grid;
-  grid-template-rows: repeat(6, 1fr);
+  overflow-y: hidden;
 }
 #profile-content {
-  grid-row: 5 / 6;
-  /*I am grossed out by all this nested flex and grid stuff. But idk how else to get my desired positioning.*/
+  position: relative;
+  top: 65%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,62 +59,72 @@ button {
   margin-right: 10px;
 }
 
-#professional {
-  background-color: #d3e6ff;
-  /*These below just combine grs and gre and gcs and gce*/
-  grid-row: 1/2;
-  grid-column: 2/-1;
+.intro {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-
-/*This extra code for the item cards in the pro section helps them to be vertical*/
-.pro.item {
-  height: 100%;
-  flex-basis: 25%;
+.blurb {
+  width: 70ch;
+  text-align: center;
+  font-size: larger;
+}
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+.item-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 1rem;
+}
+.item-photo {
+  /*This makes it so the item's photo takes up additional space, not the text.*/
+  flex: 0 1 600px;
+  /*Confused on this and need to fix later*/
+  width: 600px;
+  padding: 1rem;
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-/*-----------------------------------------------*/
+.item-blurb {
+  width: 50ch;
+  font-size: larger;
+}
+
+.title {
+  margin-bottom: 0;
+}
+
+#professional {
+  background-color: #d3e6ff;
+}
+
 #adventure {
   background-color: #b4d4ff;
-  grid-row: 2/-1;
-  grid-column: 2/3;
-  display: grid;
-  grid-template: 38% 62% / 50% 50%;
-}
-.adv.intro {
-  grid-row: 1/2;
-  grid-column: 1/2;
-}
-.adv.item.one {
-  grid-row: 1/-1;
-  grid-column: 2/3;
-}
-
-/*I need these two rules below to override the height for the PCT section*/
-.adv.item.one > .item-body {
-  height: 40%;
-}
-.adv.item.one > .item-photo {
-  height: 60%;
-}
-/*-----------------------------------------------*/
-
-#writing {
-  background-color: #86b6f6;
-  grid-row: 2/3;
-  grid-column: 3/-1;
 }
 
 #handiwork {
-  background-color: #176b87;
-  grid-row: 3/4;
-  grid-column: 3/-1;
+  background-color: #86b6f6;
 }
 
-footer {
-  background-color: darkslategrey;
+#writing {
+  background-color: #88adb9;
+  padding-bottom: 2rem;
+}
+
+button {
+  font-size: 1.5rem;
   color: white;
-  padding-left: 5px;
+  background-color: #d47012;
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
 }

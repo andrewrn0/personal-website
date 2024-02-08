@@ -14,44 +14,36 @@
 </head>
 
 <body>
-  <!--I want to try and remove the header from desktop site, use it only on the mobile site. It will be a challenge-->
-  <header></header>
-
-  <main class="container">
-    <div id="profile">
-      <div id="profile-content">
-        <h1>Andrew Noble</h1>
-        <p>Hi, I'm Andrew. I am currently learning about web development, so I am building this website as practice. My
-          favorite color is orange.
-        </p>
-        <a href="./public/about.html">More About Me</a>
-        <a href="./public/contact.html">Contact</a>
-        <div id="socials">
-          <a href="https://substack.com/@andrewrnoble"><img src="./assets/images/substack.svg"
-              alt="substack logo" /></a>
-          <a href="https://linkedin.com/andrewrnoble"><img src="./assets/images/linkedin.svg" alt="linkedin logo" /></a>
-          <a href="https://github.com/andrewrn0"><img src="./assets/images/github.svg" alt="github logo" /></a>
-        </div>
-
+  <header>
+    <div id="profile-content">
+      <h1>Andrew Noble</h1>
+      <p>Hi, I'm Andrew. I am currently learning about web development, so I am building this website purely from
+        vanilla html and css as practice. My favorite color is orange.
+      </p>
+      <a href="./public/about.html">More About Me</a>
+      <a href="./public/contact.html">Contact</a>
+      <div id="socials">
+        <a href="https://substack.com/@andrewrnoble"><img src="./assets/images/substack.svg" alt="substack logo" /></a>
+        <a href="https://linkedin.com/andrewrnoble"><img src="./assets/images/linkedin.svg" alt="linkedin logo" /></a>
+        <a href="https://github.com/andrewrn0"><img src="./assets/images/github.svg" alt="github logo" /></a>
       </div>
-    </div>
+  </header>
+  <main class="content">
     <section id="professional">
       <div class="pro intro">
         <h2 class="pro title">Professional Endeavors</h2>
-        <p class="pro blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.</p>
+        <p class="pro blurb">This section is majorly under-construction, but will be the home for any and all web
+          development and other computer science projects. So far, it only has some trivial tasks that are part of
+          the course I am taking. Stay tuned for more as I get better at this!</p>
+        <p>Also, here's an html version of my <a href="./public/resume.html">resume</a>; it mostly includes stuff from
+          when I worked as a robotics engineer.</p>
       </div>
       <div class="pro item one">
         <img class="item-photo" src="./assets/images/movies.png" />
         <div class="item-body">
           <h3 class="item-headline">Movie Ranking Project</h3>
-          <p class="item-blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt
-            ut labore et dolore mExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-            mollit anim id est laborum.</p>
+          <p class="item-blurb"> It's just some html. Pretty much the first webdev I ever did. But the rankings are
+            genuine, I love these movies.</p>
           <a class="item-link" href="./public/movie-ranking.html"><button>Check it out</button></a>
         </div>
       </div>
@@ -60,11 +52,8 @@
         <img class="item-photo" src="./assets/images/birthday.png" />
         <div class="item-body">
           <h3 class="item-headline">Birthday Invite Project</h3>
-          <p class="item-blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt
-            ut labore et dolore r sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-            mollit anim id est laborum.</p>
-          <a class="item-link" href="./public/movie-ranking.html"><button>Check it out</button></a>
+          <p class="item-blurb">Also just some garbage I made early on. Like I said, stay tuned.</p>
+          <a class="item-link" href="./public/birthday-invite.html"><button>Check it out</button></a>
         </div>
       </div>
 
@@ -76,7 +65,7 @@
             incididunt
             ut labore et dolore magna alr sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
             mollit anim id est laborum.</p>
-          <a class="item-link" href="./public/movie-ranking.html"><button>Check it out</button></a>
+          <!--<a class="item-link" href="./public/movie-ranking.html"><button>Check it out</button></a>-->
         </div>
       </div>
     </section>
@@ -84,11 +73,10 @@
     <section id="adventure">
       <div class="adv intro">
         <h2 class="adv title">Adventure</h2>
-        <p class="adv blurb">I love adventure in
-          endless forms. I love adventure that's not the norm, I love adventure in a storm. I love it here
-          and I love it there, I love adventures everywhere. For as long as I
-          can remember I've loved to see whats around the trail's bend and its lead me to the most joyful and memorable
-          experiences in my limited time here on Earth. My dad also read green eggs and ham to me as a kid. </p>
+        <p class="adv blurb">The above section is mainly an effort to make money to enable this section. I love
+          adventure in many forms. I love adventure outside the norm, I love adventure in a storm. I love it
+          here and I love it there, I love adventures everywhere. My dad also read green eggs and ham to me as a kid.
+        </p>
       </div>
       <div class="adv item one">
         <img class="item-photo" src="./assets/images/pct_prof.JPG" />
@@ -98,9 +86,13 @@
             path through Calfornia, Oregon and Washington. Through smoke and heat, frost and pain, I realized that not
             only can you be
             supremely happy in spite of being dirty, tired, and hungry, you might find yourself happy because of those
-            things.
+            things. The image on the left was taken by my talented friend <a href="https://www.nurner.com/">Nathan
+              Hurner</a>.
           </p>
-          <a class="item-link" href="./public/movie-ranking.html"><button>Check it out</button></a>
+          <p class="item-blurb"> There is an image album at the link below. I used bootstrap to make that, for practice
+            of course.</p>
+          </p>
+          <a class="item-link" href="./public/pct-2021.html"><button>Check it out</button></a>
         </div>
       </div>
       <div class="adv item two">
@@ -114,50 +106,72 @@
             bang-for-my-buck
             adventure I have ever done.
           </p>
-          <a class="item-link" href="./public/movie-ranking.html"><button>Check it out</button></a>
+          <p class="item-blurb"> The photo album below is also made with a bootstrap carousel.</p>
+          </p>
+          <a class="item-link" href="./public/pfiffner-2023.html"><button>Check it out</button></a>
         </div>
       </div>
     </section>
-    <section id="writing"></section>
-    <section id="handiwork"></section>
+    <section id="handiwork">
+      <div class="hand intro">
+        <h2 class="hand title">Handiwork</h2>
+        <p class="hand blurb">I have enjoyed making stuff in the few times I have had access to equpment and time. So
+          far this has consisted of woodworking and
+          textiles, but I want to eventually try a lot more stuff, like blacksmithing, building-scale carpentry, and
+          electronics stuff. I wish I had more time and equipment space for this. </p>
+      </div>
+      <div class="hand item one">
+        <img class="item-photo" src="./assets/images/nightstand.jpeg" />
+        <div class="item-body">
+          <h3 class="item-headline">Oak Nightstand</h3>
+          <p class="item-blurb">My first major woodworking project was this little oak nightstand made in winter 2022.
+            It is an
+            uncharacteristically nice first project because of the terrifically well-equipped <a
+              href="https://tinkermill.org/">makerspace in Longmont, CO</a>. The front is patterned plywood, I learned
+            that in this Youtube <a href="https://www.youtube.com/watch?v=XjxfVR2K_Ew">video</a>.
+          </p>
+        </div>
+      </div>
+      <div class="hand item two">
+        <img class="item-photo" src="./assets/images/stembag.jpg" />
+        <div class="item-body">
+          <h3 class="item-headline">Bikepacking Stembags</h3>
+          <p class="item-blurb">In winter 2023 I made my first textile project: these stem bags for bikepacking. I
+            learned from the pattern on <a href="https://www.youtube.com/watch?v=XjxfVR2K_Ew">MYOG</a>, which has a
+            bunch of other cool stuff too.
+          </p>
+        </div>
+      </div>
+      <div class="hand item three">
+        <img class="item-photo" src="./assets/images/monuments.jpeg" />
+        <div class="item-body">
+          <h3 class="item-headline">PCT Monuments</h3>
+          <p class="item-blurb">I made this pair of miniature PCT monuments to commemorate my 2021 hike. Even though
+            simple, these are still one of my favorite projects. I used a table saw, mitre saw, and a lazer engraver.
+          </p>
+        </div>
+      </div>
+      <div class="hand item four">
+        <img class="item-photo" src="./assets/images/hoody.JPEG" />
+        <div class="item-body">
+          <h3 class="item-headline">Hoody</h3>
+          <p class="item-blurb">My first serger-based apparel project was this fleece hoody in winter 2023 made from
+            some dollar fabric at Joanns. It looks better in person, I swear.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="writing">
+      <div class="writ intro">
+        <h2 class="writ title">Writing</h2>
+        <p class="writ blurb">I have been writing privately for years but recently in winter 2024 I started polishing
+          these ideas and
+          sharing them online. This is also something I want to massively expand, its suprisingly very fun.</p>
+        <a class="item-link" href="https://substack.com/@andrewrnoble"><button>Check out my Substack <img
+              src="./assets/images/substack.svg" alt="substack logo" /></button></a>
+      </div>
+    </section>
   </main>
-
-
-
-
-
-
-
-
-
-
-  <!-- OLD CONTENT:
-
-  <div id="header">
-    <h1>Andrew Noble</h1>
-    <div class="navbar">
-      <a class="navbar-link" href="./public/contact.html"> <button>Contact</button></a>
-      <a class="navbar-link" href="./public/about.html"><button>More About Me</button></a>
-
-    </div>
-  </div>
-  <div class="page">
-    <p>
-      Hi there, I am new web developer, throwing stuff on the internet for
-      practice. Below are some links to stuff I've made
-    </p>
-    <ul>
-      <li>
-        <a href="./public/first-webpage.html">My very first webpage</a>, to
-        remember when I get employed as a freelancer and become a digital nomad
-      </li>
-      <li>
-        An HTML version of my <a href="./public/resume.html">resume</a>, which
-        mostly has stuff from when I was working as a robotics engineer
-      </li>
-    </ul>
-  </div>
-  <footer>2024 © Andrew Noble. All Rights Reserved.</footer>--->
 </body>
 
 </html>
