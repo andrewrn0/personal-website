@@ -1,11 +1,9 @@
-/*Stuff I don't need to be responsive goes up here at the top*/
+main {
+  overflow-y: auto;
+}
 
 section {
   padding: 1rem;
-}
-
-main {
-  overflow-y: auto;
 }
 
 body {
@@ -42,10 +40,19 @@ header {
   color: white;
   font-family: Work Sans, sans-serif;
 }
+#page-links > a {
+  display: block;
+}
 #socials img {
   display: inline;
-  height: 30px;
+  height: 25px;
   margin-right: 10px;
+}
+
+/*At laptop and desktop sizes, this gives me that nice reversing of each item, looks pleasing aesthetically*/
+.two,
+.four {
+  flex-direction: row-reverse;
 }
 
 .intro {
@@ -55,9 +62,14 @@ header {
   align-items: center;
 }
 .blurb {
-  width: 70ch;
+  max-width: 70ch;
   text-align: center;
-  font-size: larger;
+  font-size: 1.25rem;
+  margin: 0.5em;
+}
+
+.item-blurb {
+  font-size: 1.15rem;
 }
 .item {
   display: flex;
@@ -69,18 +81,19 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: left;
-  padding: 1rem;
+  padding: 0.5rem;
   flex: 0 1 60ch;
 }
 .item-photo {
-  padding: 1rem;
+  padding: 0.5rem;
   flex: 0 1 40%;
   /*At a loss for why I need this... I thought the 40% above would do this.*/
   max-width: 40%;
 }
 
-.item-blurb {
-  font-size: larger;
+h3 {
+  margin-top: auto;
+  margin-bottom: 0;
 }
 
 .title {
@@ -133,22 +146,25 @@ query is met. Otherwise, the general CSS rules will rule. */
   body {
     /*First we have to disable the old layout, then apply the new*/
     grid-template-columns: none;
-    grid-template-rows: 150px 1fr;
+    grid-template-rows: 100px 1fr;
   }
 
   header {
     /*Also have to undo stuff here, prolly not best practice*/
     background-image: unset;
     background-image: url(./assets/images/me2.jpeg);
-    background-size: cover;
-    background-position: 50% 17%;
+    background-size: 160%;
+    background-position: 20% 17%;
     overflow-x: hidden;
     border-bottom: 1px black solid;
   }
   #profile-content {
     flex-direction: row;
     top: unset;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 10px;
   }
   #profile-blurb {
     display: none;
@@ -156,12 +172,24 @@ query is met. Otherwise, the general CSS rules will rule. */
   h1 {
     color: black;
   }
-}
-
-@media (min-width: 992px) {
-  /*At laptop and desktop sizes, this gives me that nice reversing of each item, looks pleasing aesthetically*/
-  .two,
-  .four {
-    flex-direction: row-reverse;
+  #socials {
+    grid-column-start: 4;
+    display: flex;
+    justify-content: end;
+  }
+  #socials img {
+    height: 20px;
+  }
+  #page-links {
+    grid-column-start: 3;
+  }
+  .blurb {
+    font-size: 1.1rem;
+  }
+  .item-blurb {
+    font-size: 1rem;
+  }
+  button {
+    font-size: 1.25rem;
   }
 }
