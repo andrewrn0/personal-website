@@ -8,20 +8,6 @@ main {
   overflow-y: auto;
 }
 
-@media (max-width: 992px) {
-  .item {
-    flex-direction: column-reverse;
-  }
-}
-
-@media (min-width: 992px) {
-  /*At laptop and desktop sizes, this gives me that nice reversing of each item, looks pleasing aesthetically*/
-  .two,
-  .four {
-    flex-direction: row-reverse;
-  }
-}
-
 body {
   margin: 0;
   display: grid;
@@ -36,8 +22,10 @@ header {
     url(./assets/images/me2.jpeg);
   background-size: cover;
   background-position: 28%;
+  /* These are actually unneccesary, the html structuring assumes that the two cells will be
+  filled by header and main. Neat.
   grid-row-start: 1;
-  grid-row-end: -1;
+  grid-row-end: -1;*/
   overflow-y: hidden;
 }
 #profile-content {
@@ -49,13 +37,14 @@ header {
   align-items: start;
   padding: 0px 25px;
 }
-#profile-content > * {
+#profile-content * {
   margin: 10px 0px;
   color: white;
   font-family: Work Sans, sans-serif;
 }
 #socials img {
-  height: 25px;
+  display: inline;
+  height: 30px;
   margin-right: 10px;
 }
 
@@ -81,21 +70,16 @@ header {
   flex-direction: column;
   justify-content: left;
   padding: 1rem;
+  flex: 0 1 60ch;
 }
 .item-photo {
-  /*This makes it so the item's photo takes up additional space, not the text.*/
-  flex: 0 1 600px;
-  /*Confused on this and need to fix later*/
-  width: 600px;
   padding: 1rem;
-}
-img {
-  max-width: 100%;
-  height: auto;
+  flex: 0 1 40%;
+  /*At a loss for why I need this... I thought the 40% above would do this.*/
+  max-width: 40%;
 }
 
 .item-blurb {
-  width: 50ch;
   font-size: larger;
 }
 
@@ -127,4 +111,57 @@ button {
   border-radius: 0.4rem;
   border: none;
   cursor: pointer;
+}
+
+/*Lesson learned, these should go at the end of the CSS doc so that they take
+precedence over unaffiliated media queries when the condition for the media
+query is met. Otherwise, the general CSS rules will rule. */
+@media (max-width: 992px) {
+  /*This just gets the items to align vertically instead of horiz at smartphone sizes*/
+  .item {
+    flex-direction: column-reverse;
+    border-top: 1px solid black;
+  }
+  .item-photo,
+  .item-body {
+    flex: 0 1 auto;
+  }
+
+  /*This is more complex and switches the sidebar to a hero at the top.
+  Basically just reformats the sidebar into a topbar as smartphone sizes.*/
+
+  body {
+    /*First we have to disable the old layout, then apply the new*/
+    grid-template-columns: none;
+    grid-template-rows: 150px 1fr;
+  }
+
+  header {
+    /*Also have to undo stuff here, prolly not best practice*/
+    background-image: unset;
+    background-image: url(./assets/images/me2.jpeg);
+    background-size: cover;
+    background-position: 50% 17%;
+    overflow-x: hidden;
+    border-bottom: 1px black solid;
+  }
+  #profile-content {
+    flex-direction: row;
+    top: unset;
+    justify-content: space-evenly;
+  }
+  #profile-blurb {
+    display: none;
+  }
+  h1 {
+    color: black;
+  }
+}
+
+@media (min-width: 992px) {
+  /*At laptop and desktop sizes, this gives me that nice reversing of each item, looks pleasing aesthetically*/
+  .two,
+  .four {
+    flex-direction: row-reverse;
+  }
 }
