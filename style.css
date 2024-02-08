@@ -146,7 +146,7 @@ query is met. Otherwise, the general CSS rules will rule. */
   body {
     /*First we have to disable the old layout, then apply the new*/
     grid-template-columns: none;
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: 90px 1fr;
   }
 
   header {
