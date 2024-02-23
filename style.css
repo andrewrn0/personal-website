@@ -127,8 +127,7 @@ button {
 }
 
 /*Lesson learned, these should go at the end of the CSS doc so that they take
-precedence over unaffiliated media queries when the condition for the media
-query is met. Otherwise, the general CSS rules will rule. */
+precedence over non-media query rules when the condition is met. */
 @media (max-width: 992px) {
   /*This just gets the items to align vertically instead of horiz at smartphone sizes*/
   .item {
