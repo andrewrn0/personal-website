@@ -20,6 +20,15 @@ $(document).keypress(function () {
   }
 });
 
+/*This extra click listener is for mobile users to start the game */
+$("body").click(function () {
+  if (!started) {
+    $("#jumbotron").text("Level 0");
+    newSequence();
+    started = true;
+  }
+});
+
 function echoTile(tileDiv) {
   $(tileDiv).addClass("user-highlighted");
   setTimeout(function () {
