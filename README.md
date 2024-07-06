@@ -1,1 +1,1 @@
-Hi! I am learning about web development and this repo is me spinning up my own personal website. It will eventually house a portfolio of projects in addition to my other interests like outdoor adventure, woodworking and writing.
+Hi! I am learning about web development and this repo is me spinning up my own personal website. It will eventually house a portfolio of projects in addition to my other interests like outdoor adventure, woodworking and writing. This is my first real project, so as of now its a simple static HTML/CSS/JS website, I hope to return later and improve it.
